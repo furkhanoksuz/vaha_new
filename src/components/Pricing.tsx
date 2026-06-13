@@ -5,8 +5,8 @@ const EASE = [0.16, 1, 0.3, 1];
 const plans = [
   {
     name: "Starter",
-    price: "$4",
-    unit: "/user",
+    priceLabel: "Kullanıcı Bazlı",
+    unit: "Aylık lisanslama",
     description: "KOBİ ve küçük ekipler için temel analiz.",
     features: [
       "Ana Dashboard",
@@ -16,9 +16,9 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$220",
-    unit: "/dept",
-    description: "AI kullanımının yoğun olduğu departmanlar.",
+    priceLabel: "Departman Bazlı",
+    unit: "AI bütçesine göre kademeli",
+    description: "AI kullanımının yoğun olduğu takımlar.",
     features: [
       "Departman bütçe yönetimi",
       "KVKK/BDDK uyum raporu",
@@ -28,20 +28,20 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "$1k",
-    unit: "/mo",
-    description: "Büyük yapılar ve özel SLA.",
+    priceLabel: "Kazan-Kazan",
+    unit: "Sadece sağlanan tasarruf üzerinden",
+    description: "Büyük yapılar ve özel entegrasyonlar.",
     features: [
-      "Sınırsız ölçeklenme",
+      "Özel güvenlik denetimi & SLA",
       "Kurumsal ESG raporlama",
-      "Özel destek ve entegrasyon"
+      "Faturada net düşüş garantisi"
     ]
   }
 ];
 
 export function PricingSection() {
   return (
-    <section className="py-32 px-6 bg-[#0A0A0A]">
+    <section id="pricing-section" className="py-32 px-6 bg-[#0A0A0A]">
       <div className="max-w-[1000px] mx-auto">
         <div className="text-center mb-20">
           <motion.h2 
@@ -86,9 +86,9 @@ export function PricingSection() {
                  <p className="text-[13px] text-zinc-500 font-medium min-h-[40px]">{plan.description}</p>
                </div>
 
-               <div className="flex items-baseline gap-1 mb-8">
-                 <span className="text-4xl font-semibold tracking-tighter text-white">{plan.price}</span>
-                 <span className="text-sm text-zinc-500 font-medium">{plan.unit}</span>
+               <div className="flex flex-col gap-1 mb-8">
+                 <span className="text-2xl font-semibold tracking-tighter text-white">{plan.priceLabel}</span>
+                 <span className="text-[13px] text-zinc-500 font-medium min-h-[20px]">{plan.unit}</span>
                </div>
 
                <div className="flex flex-col gap-3 py-6 border-t border-white/[0.05] flex-1">
@@ -105,7 +105,7 @@ export function PricingSection() {
                    ? 'bg-white text-black hover:bg-zinc-200' 
                    : 'bg-white/[0.03] text-white border border-white/[0.05] hover:bg-white/[0.08]'
                }`}>
-                 Start with {plan.name}
+                 İletişime Geç
                </button>
              </motion.div>
           ))}

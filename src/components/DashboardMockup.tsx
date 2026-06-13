@@ -10,10 +10,16 @@ export function DashboardMockup() {
       
       <div className="max-w-[700px] w-full relative z-10">
         
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: EASE }}
+          className="text-center mb-12"
+        >
             <h2 className="text-3xl font-semibold tracking-tighter text-white mb-3">Tam Kontrol Parmak Uçlarınızda</h2>
             <p className="text-zinc-500 font-medium">Hızlı, klavye odaklı ve anında yanıt veren yönetim paneli.</p>
-        </div>
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 40, scale: 0.95 }}

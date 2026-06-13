@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Search } from 'lucide-react';
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -21,13 +20,6 @@ export function Layout({ children }: { children: ReactNode }) {
           </nav>
           
           <div className="flex items-center gap-4">
-            <button className="hidden md:flex items-center gap-2 text-xs text-zinc-500 bg-white/[0.03] border border-white/10 px-3 py-1.5 rounded-full hover:bg-white/[0.06] transition-colors">
-              <Search className="w-3 h-3" />
-              <span>Search</span>
-              <div className="flex items-center">
-                <kbd>⌘</kbd><kbd>K</kbd>
-              </div>
-            </button>
             <button className="text-[13px] font-medium text-zinc-300 hover:text-white transition-colors">
               Giriş
             </button>
@@ -51,9 +43,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <span className="font-medium text-zinc-300">Vaha Inc.</span>
           </div>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-zinc-300 transition-colors">Twitter</a>
-            <a href="#" className="hover:text-zinc-300 transition-colors">GitHub</a>
-            <a href="#" className="hover:text-zinc-300 transition-colors">Gizlilik</a>
+            <a href="mailto:contact@getvaha.co" className="hover:text-zinc-300 transition-colors">İletişim: contact@getvaha.co</a>
           </div>
         </div>
       </footer>

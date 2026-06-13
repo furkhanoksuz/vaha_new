@@ -24,7 +24,13 @@ export function Metrics() {
   return (
     <section className="py-24 px-6 border-y border-white/[0.05] bg-[#0A0A0A] relative z-10">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid md:grid-cols-3 gap-px bg-white/[0.05] rounded-2xl overflow-hidden border border-white/[0.05]">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: EASE }}
+          className="grid md:grid-cols-3 gap-px bg-white/[0.05] rounded-2xl overflow-hidden border border-white/[0.05]"
+        >
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -41,7 +47,7 @@ export function Metrics() {
               <p className="text-sm text-zinc-500 max-w-[200px] leading-relaxed mx-auto">{stat.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

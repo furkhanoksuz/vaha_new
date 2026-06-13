@@ -29,8 +29,8 @@ export function CrisisSection() {
           
           <div className="md:w-1/2 flex flex-col justify-center">
             <motion.h2 
-              initial={{ opacity: 0, y: 30, filter: "blur(5px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: EASE }}
               className="text-4xl md:text-5xl font-semibold tracking-tighter text-white mb-6 leading-tight"
@@ -53,8 +53,8 @@ export function CrisisSection() {
             {crises.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20, filter: "blur(5px)" }}
-                whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, delay: 0.2 + (i * 0.1), ease: EASE }}
                 className="relative"

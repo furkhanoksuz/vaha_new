@@ -8,8 +8,8 @@ export function Hero() {
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex flex-col items-center justify-center text-center px-6 min-h-screen">
       
       <motion.div
-        initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: EASE }}
         className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-zinc-300 backdrop-blur-md hover:bg-white/[0.06] transition-colors cursor-pointer"
       >
@@ -19,8 +19,8 @@ export function Hero() {
       </motion.div>
 
       <motion.h1 
-        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
         className="max-w-[900px] text-5xl md:text-7xl font-semibold tracking-tighter leading-[1.1] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50 mb-6"
       >
@@ -29,8 +29,8 @@ export function Hero() {
       </motion.h1>
 
       <motion.p 
-        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
         className="max-w-[600px] text-lg text-zinc-400 mb-10 leading-relaxed font-medium"
       >
@@ -39,8 +39,8 @@ export function Hero() {
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
         className="flex flex-col sm:flex-row items-center gap-4"
       >
